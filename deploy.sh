@@ -10,4 +10,4 @@ if ! which gsutil &>/dev/null; then
 fi
 
 sass "$(pwd):$(pwd)"
-gsutil rsync -x '.*\.sass$|.*\.map$|.*\.scss$|LICENSE$|README.md$|\.git' -R . "gs://$(basename "$(pwd)")"
+gsutil rsync -x '.*\.sass$|.*\.map$|.*\.scss$|deploy.sh$|LICENSE$|README.md$|\.git.*$' -R . "gs://$(basename "$(pwd)")"
